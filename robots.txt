@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://niragire-rutagengwa-richard.github.io/sitemap.xml
