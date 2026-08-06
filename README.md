@@ -25,3 +25,4 @@ Do not upload:
 - national ID or full home address
 - patient data
 - confidential project reports or client screenshots
+-Portfolio website deployment.
