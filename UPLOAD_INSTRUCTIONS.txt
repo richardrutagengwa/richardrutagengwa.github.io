@@ -1,23 +1,32 @@
-COMOROS EVENT UPDATE — GITHUB UPLOAD
+EVENTS PORTFOLIO v2 — SIMPLE UPLOAD
 
-Upload/replace these root files:
-- index.html
-- style.css
-- sitemap.xml
-- robots.txt
+This update changes the large Events block into a scalable event-card gallery.
+It also adds a dedicated event page for the Comoros REV & MEV Training of Trainers.
 
-Then create/upload this folder structure:
-assets/
-  events/
-    comoros-rev-mev-tot/
-      group-photo.jpg
-      mev-presentation.jpg
-      practical-session.jpg
+1. In GitHub repository richardrutagengwa.github.io:
+   Add file → Upload files
 
-Recommended commit message:
-Add Comoros REV and MEV Training of Trainers event
+2. Upload/replace these at the ROOT:
+   - index.html
+   - style.css
+   - sitemap.xml
+   - robots.txt
 
-After GitHub Pages deployment is green, refresh:
-https://richardrutagengwa.github.io/?v=events1
+3. Upload the new folder:
+   events/
+     comoros-rev-mev-tot.html
 
-Use Ctrl + Shift + R if the old page is cached.
+4. Keep the existing photos under:
+   assets/events/comoros-rev-mev-tot/
+
+5. Commit message:
+   Upgrade Events portfolio and add Comoros event page
+
+6. After Pages deployment is green, open:
+   https://richardrutagengwa.github.io/?v=events2
+
+7. Click:
+   Events → View event & photos
+
+The event detail page should open at:
+https://richardrutagengwa.github.io/events/comoros-rev-mev-tot.html
