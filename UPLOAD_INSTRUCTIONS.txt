@@ -1,0 +1,23 @@
+COMOROS EVENT UPDATE — GITHUB UPLOAD
+
+Upload/replace these root files:
+- index.html
+- style.css
+- sitemap.xml
+- robots.txt
+
+Then create/upload this folder structure:
+assets/
+  events/
+    comoros-rev-mev-tot/
+      group-photo.jpg
+      mev-presentation.jpg
+      practical-session.jpg
+
+Recommended commit message:
+Add Comoros REV and MEV Training of Trainers event
+
+After GitHub Pages deployment is green, refresh:
+https://richardrutagengwa.github.io/?v=events1
+
+Use Ctrl + Shift + R if the old page is cached.
