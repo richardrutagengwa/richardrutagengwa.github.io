@@ -2217,3 +2217,33 @@ section[id] { scroll-margin-top: 0 !important; }
   .section-heading,
   .section-heading.centered { margin-bottom: 1.75rem; }
 }
+
+
+/* Small global tightening requested: bring every section's content slightly upward */
+.section {
+  padding-top: clamp(2.9rem, 4.4vw, 4rem) !important;
+  padding-bottom: clamp(2.9rem, 4.4vw, 4rem) !important;
+}
+.section-heading,
+.section-heading.centered {
+  margin-bottom: clamp(1.45rem, 2.5vw, 2rem) !important;
+}
+#experience .timeline { margin-top: clamp(1.8rem, 2.7vw, 2.4rem); }
+#projects .section-heading.centered,
+#events .section-heading.centered,
+#speaking .section-heading.centered,
+#skills .section-heading.centered {
+  margin-top: 0 !important;
+  margin-bottom: clamp(1.45rem, 2.5vw, 2rem) !important;
+}
+@media (max-width: 680px) {
+  .section {
+    padding-top: 2.6rem !important;
+    padding-bottom: 2.6rem !important;
+  }
+  .section-heading,
+  .section-heading.centered {
+    margin-bottom: 1.35rem !important;
+  }
+  #experience .timeline { margin-top: 1.6rem; }
+}
