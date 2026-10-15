@@ -104,7 +104,7 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">Explore my work</a>
             <a class="btn btn-ghost" href="https://www.linkedin.com/in/richard-niragire-rutagengwa-43662326b/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn-ghost" href="mailto:rrutagengwa@gmail.com?subject=Request%20for%20CV%20access">Request CV access</a>
+            <a class="btn btn-ghost" href="#cv-access">Request CV access</a>
           </div>
         </div>
         <div class="portrait-card reveal">
@@ -527,9 +527,29 @@
             <button class="btn btn-primary contact-submit" type="submit">Send Email <span aria-hidden="true">↗</span></button>
             <p class="contact-form-note">On the first submission, FormSubmit will ask the portfolio owner to verify this email address. After verification, messages can be delivered to the inbox.</p>
           </form>
+          <div class="cv-access-panel" id="cv-access">
+            <div class="contact-form-heading">
+              <h3>Request my CV</h3>
+              <p>CV access is reviewed individually. If approved, I will share a restricted view-only copy with your email address.</p>
+            </div>
+            <form class="contact-form" id="cv-access-form" action="https://formsubmit.co/rrutagengwa@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="CV access request — professional portfolio">
+              <input type="hidden" name="_template" value="table">
+              <label for="cv-request-name">Your full name</label>
+              <input id="cv-request-name" name="name" type="text" autocomplete="name" placeholder="Full name" required>
+              <label for="cv-request-email">Professional email address</label>
+              <input id="cv-request-email" name="email" type="email" autocomplete="email" placeholder="you@organization.org" required>
+              <label for="cv-request-organization">Organization</label>
+              <input id="cv-request-organization" name="organization" type="text" autocomplete="organization" placeholder="Organization or institution">
+              <label for="cv-request-reason">Purpose of request</label>
+              <textarea id="cv-request-reason" name="purpose" rows="3" placeholder="For example, recruitment, consultancy, or professional collaboration" required></textarea>
+              <button class="btn btn-primary contact-submit" type="submit">Submit CV request <span aria-hidden="true">↗</span></button>
+              <p class="contact-form-note">Submitting this form does not grant access automatically. Requests are reviewed first; approved applicants receive access separately by email.</p>
+            </form>
+          </div>
           <div class="contact-form-links">
             <a href="https://www.linkedin.com/in/richard-niragire-rutagengwa-43662326b/" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a href="mailto:rrutagengwa@gmail.com?subject=Request%20for%20CV%20access">Request CV access ↗</a>
+            <a href="#cv-access">Request CV access ↗</a>
           </div>
         </div>
       </div>
