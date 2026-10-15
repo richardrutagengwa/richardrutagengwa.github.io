@@ -2206,3 +2206,8 @@ section[id] { scroll-margin-top: 0; }
   #experience { padding-bottom: 2.75rem; }
   #projects { padding-top: 2.75rem; }
 }
+
+
+/* Single source of truth for in-page anchor positioning; JS measures the fixed header. */
+html { scroll-padding-top: 0 !important; }
+section[id] { scroll-margin-top: 0 !important; }
