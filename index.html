@@ -527,16 +527,14 @@
             <button class="btn btn-primary contact-submit" type="submit">Send Email <span aria-hidden="true">↗</span></button>
             <p class="contact-form-note">On the first submission, FormSubmit will ask the portfolio owner to verify this email address. After verification, messages can be delivered to the inbox.</p>
           </form>
-          <div class="cv-access-panel" id="cv-access">
-            <div class="contact-form-heading">
-              <h3>Request my CV</h3>
-              <p>CV access is reviewed individually. If approved, I will share a restricted view-only copy with your email address.</p>
-            </div>
+          <details class="cv-access-panel" id="cv-access">
+            <summary class="cv-access-summary">Request CV access <span aria-hidden="true">＋</span></summary>
+            <p class="cv-access-intro">CV access is reviewed individually. If approved, I will share a restricted view-only copy with your email address.</p>
             <form class="contact-form" id="cv-access-form" action="https://formsubmit.co/rrutagengwa@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="CV access request — professional portfolio">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_next" value="https://richardrutagengwa.github.io/cv-request-received.html">
-              <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-honey" style="position:absolute;left:-10000px;width:1px;height:1px;">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-honey" style="display:none !important">
               <label for="cv-request-name">Your full name</label>
               <input id="cv-request-name" name="name" type="text" autocomplete="name" placeholder="Full name" required>
               <label for="cv-request-email">Professional email address</label>
@@ -548,7 +546,7 @@
               <button class="btn btn-primary contact-submit" type="submit">Submit CV request <span aria-hidden="true">↗</span></button>
               <p class="contact-form-note">Submitting this form does not grant access automatically. Requests are reviewed first; approved applicants receive access separately by email.</p>
             </form>
-          </div>
+          </details>
           <div class="contact-form-links">
             <a href="https://www.linkedin.com/in/richard-niragire-rutagengwa-43662326b/" target="_blank" rel="noopener">LinkedIn ↗</a>
             <a href="#cv-access">Request CV access ↗</a>
