@@ -27,14 +27,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 
 
-// Contact form: open WhatsApp with a prefilled message to Richard.
+// Contact form: open a pre-addressed email draft; WhatsApp has its own links.
 document.getElementById('contact-form')?.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
   const email = form.elements.email.value.trim();
   const message = form.elements.message.value.trim();
   if (!email || !message) return;
-  const body = 'Hello Richard, I am contacting you from your portfolio.\\n\\nMy email: ' + email + '\\n\\n' + message;
-  const url = 'https://wa.me/250788426156?text=' + encodeURIComponent(body);
-  window.open(url, '_blank', 'noopener,noreferrer');
+  const subject = encodeURIComponent('Portfolio enquiry from ' + email);
+  const body = encodeURIComponent('Reply to: ' + email + '\n\n' + message);
+  window.location.href = 'mailto:rrutagengwa@gmail.com?subject=' + subject + '&body=' + body;
 });
