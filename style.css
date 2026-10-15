@@ -2247,3 +2247,42 @@ section[id] { scroll-margin-top: 0 !important; }
   }
   #experience .timeline { margin-top: 1.6rem; }
 }
+
+
+/* Definitive compact section rhythm — override accumulated spacing passes */
+.section {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+.section-heading,
+.section-heading.centered {
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+#experience .timeline { margin-top: 1.5rem !important; }
+#about .two-col { margin-top: 0 !important; }
+#projects .project-grid,
+#events .events-grid,
+#speaking .speaking-grid,
+#skills .skills-grid { margin-top: 0 !important; }
+.contact-section {
+  padding-top: 0 !important;
+  padding-bottom: 2.5rem !important;
+}
+@media (max-width: 900px) {
+  .section {
+    padding-top: 2.15rem !important;
+    padding-bottom: 2.15rem !important;
+  }
+  .section-heading,
+  .section-heading.centered { margin-bottom: 1.25rem !important; }
+}
+@media (max-width: 640px) {
+  .section {
+    padding-top: 1.8rem !important;
+    padding-bottom: 1.8rem !important;
+  }
+  .section-heading,
+  .section-heading.centered { margin-bottom: 1rem !important; }
+  #experience .timeline { margin-top: 1.1rem !important; }
+}
