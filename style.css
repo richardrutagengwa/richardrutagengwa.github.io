@@ -2556,3 +2556,10 @@ section[id] { scroll-margin-top: 0 !important; }
 }
 #projects .project-image:focus-visible { outline: 3px solid var(--teal, #168b92); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { #projects .project-image img { transition: none; } }
+
+
+/* Official evidence links on portfolio project cards */
+#projects .project-source { margin: .75rem 0 0; font-size: .86rem; line-height: 1.5; }
+#projects .project-source a { color: var(--teal, #147d86); font-weight: 750; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+#projects .project-source a:hover { color: var(--navy, #123b5d); }
+#projects .project-image span { line-height: 1.5; }
