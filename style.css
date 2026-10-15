@@ -426,3 +426,274 @@ footer{background:#041327;color:#9fb0c0;padding:1.5rem 0}
   .events-grid{grid-template-columns:1fr}
   .event-card-image{height:245px}
 }
+/* ==========================================================
+   RICHARD RUTAGENGWA PORTFOLIO — VISUAL REFINEMENT PATCH
+   Append this at the END of style.css. Existing HTML, assets,
+   sections, navigation and links remain intact.
+   ========================================================== */
+
+:root {
+  --navy: #071a2d;
+  --navy-2: #0b2943;
+  --ink: #12243a;
+  --gold: #e0ad45;
+  --teal: #22b8bd;
+  --cream: #f7f5f0;
+  --line: #e2e7ed;
+  --shadow: 0 24px 70px rgba(5, 24, 47, .12);
+  --radius: 22px;
+}
+
+html { scroll-padding-top: 88px; }
+body { letter-spacing: -.008em; -webkit-font-smoothing: antialiased; }
+.container { width: min(1180px, calc(100% - 56px)); }
+
+/* A calmer, more deliberate navigation bar */
+.site-header {
+  background: rgba(5, 20, 37, .92);
+  border-bottom-color: rgba(255,255,255,.09);
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+.nav-wrap { width: min(1240px, calc(100% - 48px)); height: 76px; }
+.brand { gap: .8rem; }
+.brand-mark {
+  width: 44px; height: 44px; font-size: 1.05rem;
+  border-color: rgba(224,173,69,.8);
+}
+.brand-name { font-size: .94rem; }
+.nav { gap: clamp(.8rem, 1.55vw, 1.5rem); }
+.nav a { font-size: .91rem; transition: color .2s ease; }
+
+/* Hero: clearer hierarchy, less background competition */
+.hero {
+  min-height: min(790px, 100svh);
+  padding: 132px 0 82px;
+  isolation: isolate;
+}
+.hero-bg { opacity: .48; background-position: center 46%; }
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(4,17,33,.98) 0%, rgba(4,17,33,.91) 43%, rgba(4,17,33,.57) 72%, rgba(4,17,33,.45) 100%),
+    linear-gradient(0deg, rgba(4,17,33,.72), transparent 58%);
+}
+.hero-pattern { opacity: .075; }
+.hero-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(290px, .72fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+}
+.hero-copy { max-width: 700px; }
+.eyebrow { font-size: .72rem; letter-spacing: .22em; margin-bottom: 1.05rem; }
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(3.45rem, 5.25vw, 5.4rem);
+  line-height: .99;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.hero-title {
+  max-width: 650px;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.3;
+  margin: 1.25rem 0 .85rem;
+  letter-spacing: -.025em;
+}
+.hero-summary {
+  max-width: 630px;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #d1dbe5;
+}
+.hero-tags { gap: .55rem; margin: 1.35rem 0 1.65rem; }
+.hero-tags span {
+  padding: .43rem .78rem;
+  font-size: .81rem;
+  background: rgba(15, 177, 190, .10);
+  border-color: rgba(34,184,189,.42);
+}
+.btn {
+  min-height: 48px;
+  padding: .82rem 1.25rem;
+  font-size: .92rem;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.btn-primary { box-shadow: 0 8px 22px rgba(224,173,69,.15); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(224,173,69,.24); }
+.btn-ghost:hover { transform: translateY(-2px); }
+
+/* Portrait becomes a polished profile panel, not a competing block */
+.portrait-card {
+  width: min(100%, 365px);
+  justify-self: end;
+  padding: 1rem;
+  border-radius: 28px;
+  background: rgba(5,20,39,.78);
+  border-color: rgba(255,255,255,.16);
+  box-shadow: 0 28px 80px rgba(0,0,0,.32);
+}
+.portrait-ring { border-radius: 22px; border-width: 1.5px; }
+.portrait-ring img { width: 100%; aspect-ratio: 4 / 4.15; object-position: center 28%; }
+.portrait-meta { padding: 1rem .25rem .25rem; gap: .32rem; }
+.portrait-meta strong { font-size: .96rem; }
+.portrait-meta span { line-height: 1.5; }
+
+/* Career highlights: compact and aligned */
+.impact-strip { background: #f7f5f0; }
+.impact-grid div { padding: 1.45rem 1.35rem; }
+.impact-grid strong { font-size: 1.12rem; letter-spacing: -.02em; }
+.impact-grid span { display: block; line-height: 1.55; margin-top: .15rem; }
+
+/* Sections: consistent rhythm and more readable content widths */
+.section { padding: clamp(76px, 8vw, 108px) 0; }
+.two-col { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: clamp(3rem, 7vw, 7rem); }
+.section-heading h2 {
+  font-size: clamp(2.35rem, 4vw, 3.55rem);
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.section-heading.centered { max-width: 860px; margin-bottom: 3.6rem; }
+.about-copy { font-size: 1rem; line-height: 1.85; }
+.about-copy p:first-child { font-size: clamp(1.1rem, 1.45vw, 1.25rem); line-height: 1.75; }
+.about-copy p { margin-top: 0; margin-bottom: 1.05rem; }
+
+/* Experience timeline: improve balance and reading width */
+.timeline { max-width: 1020px; margin-top: 3.8rem; }
+.timeline-item { grid-template-columns: 190px minmax(0, 1fr); gap: 2.3rem; padding-bottom: 3.2rem; }
+.timeline-item:before { left: 201px; }
+.timeline-item:after { left: 195px; }
+.timeline-date { font-size: .9rem; line-height: 1.6; }
+.timeline-content { padding-left: .5rem; max-width: 760px; }
+.timeline-content h3 { font-size: 1.23rem; line-height: 1.4; }
+.timeline-content p { line-height: 1.8; }
+
+/* Projects: elevate cards and make the grid feel intentional */
+.project-grid { gap: 1.35rem; }
+.project-card {
+  padding: 2rem 2rem 1.9rem;
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(8,35,64,.045);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(8,35,64,.10);
+  border-color: #c9d8e4;
+}
+.project-card:before { width: 4px; }
+.project-card h3 { font-size: 1.3rem; line-height: 1.35; }
+.project-card p { line-height: 1.75; }
+.chips span { font-size: .74rem; }
+
+/* Events: consistent image and card proportions */
+.events-grid { gap: 1.25rem; }
+.event-card { border-radius: 22px; box-shadow: 0 12px 34px rgba(8,35,64,.07); }
+.event-card-image { height: 245px; }
+.event-card-body { padding: 1.35rem; }
+.event-card h3 { font-size: 1.42rem; }
+
+/* Skills and contact */
+.skills-grid { gap: .65rem; }
+.skills-grid span {
+  padding: .62rem .85rem;
+  font-size: .84rem;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.skills-grid span:hover { background: #eef8fa; border-color: #a9d9de; transform: translateY(-2px); }
+.contact-section { padding-bottom: 96px; }
+.contact-card {
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3.25rem);
+  gap: clamp(2rem, 4vw, 4rem);
+}
+.contact-card h2 { font-size: clamp(1.9rem, 3vw, 2.35rem); }
+.contact-card p { line-height: 1.75; }
+.contact-actions .btn { width: 100%; }
+footer { font-size: .9rem; }
+
+/* Keyboard accessibility and reduced-motion support */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .container { width: min(100% - 42px, 850px); }
+  .hero { min-height: auto; padding: 125px 0 72px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(230px, .65fr); gap: 2.25rem; }
+  .hero h1 { font-size: clamp(3.15rem, 6.3vw, 4.6rem); }
+  .portrait-card { max-width: 320px; }
+  .two-col { gap: 3rem; }
+  .nav { gap: .9rem; }
+  .nav a { font-size: .86rem; }
+}
+
+/* Mobile navigation and stacked hero */
+@media (max-width: 900px) {
+  .nav-wrap { height: 70px; }
+  .nav {
+    top: 70px; gap: 0; padding: .65rem 1.25rem 1rem;
+    box-shadow: 0 18px 28px rgba(0,0,0,.18);
+  }
+  .nav a { width: 100%; padding: .8rem .25rem; font-size: .98rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav a:last-child { border-bottom: 0; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.3rem; }
+  .hero-copy { max-width: 720px; }
+  .portrait-card { justify-self: start; width: min(100%, 320px); }
+  .two-col, .speaking-grid, .contact-card { grid-template-columns: 1fr; }
+  .two-col { gap: 1.5rem; }
+  .impact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .impact-grid div:nth-child(2) { border-right: 0; }
+  .timeline-item { grid-template-columns: 1fr; gap: .45rem; padding-left: 1.8rem; }
+  .timeline-item:before { left: 4px; }
+  .timeline-item:after { left: -2px; }
+  .timeline-date { text-align: left; padding: 0; }
+  .timeline-content { padding: 0; }
+  .project-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .container { width: calc(100% - 32px); }
+  .nav-wrap { width: calc(100% - 32px); }
+  .brand-name { display: inline; font-size: .84rem; }
+  .brand-mark { width: 39px; height: 39px; }
+  .hero { padding: 112px 0 54px; }
+  .hero-bg { background-position: 58% center; }
+  .hero-overlay {
+    background: linear-gradient(90deg, rgba(4,17,33,.96), rgba(4,17,33,.82)),
+                linear-gradient(0deg, rgba(4,17,33,.75), transparent);
+  }
+  .hero h1 { font-size: clamp(2.75rem, 12vw, 3.7rem); line-height: 1; }
+  .hero-title { font-size: 1.18rem; margin-top: 1rem; }
+  .hero-summary { font-size: .98rem; line-height: 1.72; }
+  .hero-tags { gap: .45rem; margin-bottom: 1.35rem; }
+  .hero-tags span { font-size: .76rem; padding: .38rem .65rem; }
+  .hero-actions { gap: .6rem; }
+  .btn { min-height: 45px; padding: .72rem 1rem; font-size: .87rem; }
+  .portrait-card { max-width: 280px; }
+  .impact-grid { grid-template-columns: 1fr 1fr; }
+  .impact-grid div { padding: 1.1rem .8rem; }
+  .impact-grid strong { font-size: 1rem; }
+  .impact-grid span { font-size: .79rem; }
+  .section { padding: 68px 0; }
+  .section-heading h2 { font-size: clamp(2.1rem, 9vw, 2.8rem); }
+  .section-heading.centered { text-align: left; margin-bottom: 2rem; }
+  .timeline { margin-top: 2.5rem; }
+  .timeline-content h3 { font-size: 1.12rem; }
+  .project-card { padding: 1.55rem 1.35rem; }
+  .events-grid { grid-template-columns: 1fr; }
+  .event-card-image { height: 230px; }
+  .contact-card { padding: 1.6rem 1.25rem; border-radius: 22px; }
+  .contact-card h2 { font-size: 1.85rem; }
+  .footer-wrap { flex-direction: column; }
+}
+@media (max-width: 380px) {
+  .brand-name { max-width: 185px; line-height: 1.2; }
+  .hero h1 { font-size: 2.55rem; }
+  .hero-actions .btn { padding-inline: .78rem; }
+  .impact-grid { grid-template-columns: 1fr; }
+  .impact-grid div { border-right: 0; border-bottom: 1px solid #ded8cc; }
+  .impact-grid div:last-child { border-bottom: 0; }
+}
+
