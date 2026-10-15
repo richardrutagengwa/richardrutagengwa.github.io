@@ -2689,3 +2689,36 @@ footer { padding: 1.25rem 0; }
   .certificate-controls > button { min-height: 42px; }
   .footer-wrap { align-items: flex-start; }
 }
+
+
+/* Certificate section refinement: keep the whole slide visually balanced in the viewport */
+#certifications .section-heading { margin-bottom: clamp(1.25rem, 2.5vw, 1.8rem); }
+#certifications .section-heading h2 { font-size: clamp(2.25rem, 4.5vw, 4rem); line-height: 1.08; }
+#certifications .section-heading .section-intro { max-width: 58ch; line-height: 1.55; }
+#certifications .certificate-showcase { margin-top: 1.5rem; }
+#certifications .certificate-slide {
+  grid-template-columns: minmax(0, 1fr) minmax(0, .82fr);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  padding: clamp(1rem, 2.1vw, 1.5rem);
+}
+#certifications .certificate-art {
+  min-height: 0;
+  aspect-ratio: 1.24 / 1;
+  gap: clamp(.6rem, 1.3vw, 1rem);
+  padding: clamp(1rem, 2vw, 1.6rem);
+  outline-offset: -13px;
+  border-width: 7px;
+}
+#certifications .certificate-brand { font-size: clamp(.58rem, .8vw, .72rem); }
+#certifications .certificate-kicker { font-size: clamp(.9rem, 1.45vw, 1.3rem); }
+#certifications .certificate-art strong { font-size: clamp(1.05rem, 1.9vw, 1.65rem); }
+#certifications .certificate-holder { font-size: clamp(.78rem, 1vw, .92rem); }
+#certifications .certificate-date { font-size: clamp(.7rem, .9vw, .8rem); }
+#certifications .certificate-details h3 { font-size: clamp(1.3rem, 2vw, 1.75rem); }
+#certifications .certificate-details p { font-size: .96rem; margin: .55rem 0; }
+#certifications .certificate-note { max-width: 75ch; margin-inline: auto; }
+@media (max-width: 700px) {
+  #certifications .section-heading h2 { font-size: clamp(2rem, 8vw, 2.7rem); }
+  #certifications .certificate-slide { grid-template-columns: 1fr; }
+  #certifications .certificate-art { aspect-ratio: 1.35 / 1; min-height: 0; }
+}
