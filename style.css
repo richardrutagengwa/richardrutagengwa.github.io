@@ -2175,3 +2175,12 @@ section[id] { scroll-margin-top: 88px; }
   #projects .project-card:first-child { grid-column: auto; }
   #projects .project-card, #projects .project-card:first-child { min-height: auto; }
 }
+
+
+/* Keep anchored sections clear of the sticky navigation at browser zoom levels */
+html { scroll-padding-top: 132px; }
+section[id] { scroll-margin-top: 132px; }
+@media (max-width: 820px) {
+  html { scroll-padding-top: 88px; }
+  section[id] { scroll-margin-top: 88px; }
+}
