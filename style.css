@@ -2191,3 +2191,18 @@ section[id] { scroll-margin-top: 0; }
 @media (max-width: 820px) {
   section[id] { scroll-margin-top: 0; }
 }
+
+
+/* Reduce the visual dead zone between Experience and Projects */
+#experience { padding-bottom: clamp(3.5rem, 5vw, 4.5rem); }
+#projects { padding-top: clamp(3.25rem, 4.5vw, 4.5rem); }
+#projects .section-heading.centered { margin-top: 0; }
+#projects .section-heading.centered .eyebrow { margin-top: 0; }
+@media (max-width: 900px) {
+  #experience { padding-bottom: 3.5rem; }
+  #projects { padding-top: 3.25rem; }
+}
+@media (max-width: 600px) {
+  #experience { padding-bottom: 2.75rem; }
+  #projects { padding-top: 2.75rem; }
+}
