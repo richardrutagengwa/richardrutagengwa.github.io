@@ -2479,3 +2479,16 @@ section[id] { scroll-margin-top: 0 !important; }
 .contact-form-note { position: static !important; margin: .25rem 0 0; }
 .contact-detail > span:last-child { align-content: start; }
 .contact-detail a { display: block; }
+
+
+/* Final contact usability refinements */
+#contact { scroll-margin-top: 96px; }
+.contact-layout { padding-top: 1.25rem !important; }
+.contact-intro h2 { overflow-wrap: normal; }
+.contact-detail a { width: fit-content; }
+.contact-form-note { line-height: 1.55; }
+.contact-submit { min-height: 54px; font-size: .98rem; }
+@media (max-width: 800px) {
+  #contact { scroll-margin-top: 82px; }
+  .contact-layout { padding-top: .5rem !important; }
+}
