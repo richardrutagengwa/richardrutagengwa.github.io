@@ -697,3 +697,27 @@ a:focus-visible, button:focus-visible {
   .impact-grid div:last-child { border-bottom: 0; }
 }
 
+/* Fix hero title clipping */
+.hero {
+  padding-top: 150px;
+  min-height: 780px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 4.6vw, 4.7rem);
+  line-height: 1.02;
+  max-width: 680px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 115px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 10vw, 3.4rem);
+    line-height: 1.03;
+  }
+}
+
