@@ -2188,3 +2188,32 @@ section[id] { scroll-margin-top: 0 !important; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+
+/* Global vertical rhythm: reduce oversized gaps between all portfolio sections */
+.section {
+  padding-top: clamp(3.5rem, 5.2vw, 4.75rem) !important;
+  padding-bottom: clamp(3.5rem, 5.2vw, 4.75rem) !important;
+}
+.section-heading { margin-bottom: clamp(1.75rem, 3vw, 2.5rem); }
+.section-heading.centered { margin-bottom: clamp(1.75rem, 3vw, 2.5rem); }
+#experience .section-heading.centered { margin-bottom: clamp(2rem, 3.5vw, 2.75rem); }
+#about .two-col { align-items: start; }
+#about .about-copy { margin-top: 0; }
+#projects .section-heading.centered,
+#events .section-heading.centered,
+#speaking .section-heading.centered,
+#skills .section-heading.centered {
+  margin-top: 0;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+.contact-section { padding-top: 0 !important; }
+
+@media (max-width: 680px) {
+  .section {
+    padding-top: 3.25rem !important;
+    padding-bottom: 3.25rem !important;
+  }
+  .section-heading,
+  .section-heading.centered { margin-bottom: 1.75rem; }
+}
