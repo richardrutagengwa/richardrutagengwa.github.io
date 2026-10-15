@@ -2492,3 +2492,13 @@ section[id] { scroll-margin-top: 0 !important; }
   #contact { scroll-margin-top: 82px; }
   .contact-layout { padding-top: .5rem !important; }
 }
+
+
+/* Keep email submission separate from direct phone/WhatsApp actions */
+.contact-form-note { max-width: 52ch; }
+.contact-details .contact-detail a { margin-right: .65rem; }
+.contact-detail a[href^="tel:"] { color: #d9e5f1; }
+.contact-detail a[href^="https://wa.me/"] { color: var(--gold, #e1bd68); font-size: .86rem; }
+@media (max-width: 480px) {
+  .contact-details .contact-detail a { overflow-wrap: anywhere; }
+}
