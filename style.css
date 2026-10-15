@@ -2211,3 +2211,14 @@ section[id] { scroll-margin-top: 0; }
 /* Single source of truth for in-page anchor positioning; JS measures the fixed header. */
 html { scroll-padding-top: 0 !important; }
 section[id] { scroll-margin-top: 0 !important; }
+
+
+/* Use native browser hash navigation with one consistent fixed-header offset. */
+html { scroll-behavior: smooth; scroll-padding-top: 170px !important; }
+section[id] { scroll-margin-top: 0 !important; }
+@media (max-width: 900px) {
+  html { scroll-padding-top: 100px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
