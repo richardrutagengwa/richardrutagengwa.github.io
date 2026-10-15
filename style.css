@@ -2502,3 +2502,13 @@ section[id] { scroll-margin-top: 0 !important; }
 @media (max-width: 480px) {
   .contact-details .contact-detail a { overflow-wrap: anywhere; }
 }
+
+
+/* Skills grouped around demonstrated health-systems and implementation experience */
+#skills .skills-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+#skills .skill-group { padding: 1.35rem; border: 1px solid #dce5eb; border-radius: 18px; background: #fff; box-shadow: 0 8px 24px rgba(8,35,64,.045); }
+#skills .skill-group h3 { margin: 0 0 .9rem; color: var(--navy); font-size: 1.08rem; line-height: 1.4; }
+#skills .skill-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+#skills .skill-tags span { display: inline-flex; align-items: center; padding: .42rem .65rem; border: 1px solid #d6e5e8; border-radius: 999px; background: #f5fafb; color: #24415b; font-size: .78rem; font-weight: 650; line-height: 1.45; }
+#skills .skill-tags span:hover { border-color: var(--teal); background: #eef8fa; }
+@media (max-width: 700px) { #skills .skills-groups { grid-template-columns: 1fr; } }
