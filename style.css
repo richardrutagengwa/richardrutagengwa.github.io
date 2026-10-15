@@ -2184,3 +2184,10 @@ section[id] { scroll-margin-top: 132px; }
   html { scroll-padding-top: 88px; }
   section[id] { scroll-margin-top: 88px; }
 }
+
+
+/* Avoid double-counting the sticky-header offset on anchor navigation */
+section[id] { scroll-margin-top: 0; }
+@media (max-width: 820px) {
+  section[id] { scroll-margin-top: 0; }
+}
