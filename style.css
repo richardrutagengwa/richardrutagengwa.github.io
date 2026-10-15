@@ -720,4 +720,302 @@ a:focus-visible, button:focus-visible {
     line-height: 1.03;
   }
 }
+/* =========================================================
+   RICHARD RUTAGENGWA — PORTFOLIO UI REFINEMENT V2
+   Append at the VERY END of the existing style.css.
+   Designed around the existing HTML classes and sections.
+   ========================================================= */
+
+:root {
+  --navy: #06182f;
+  --navy-2: #0a2340;
+  --ink: #12243a;
+  --gold: #d6a23d;
+  --teal: #15b8c6;
+  --cream: #f5f2eb;
+  --line: #dce3ea;
+  --shadow-soft: 0 16px 42px rgba(5, 24, 47, .08);
+  --shadow-card: 0 22px 52px rgba(5, 24, 47, .11);
+}
+
+html { scroll-padding-top: 88px; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.container { width: min(1180px, calc(100% - 48px)); }
+a { text-underline-offset: 4px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+/* Navigation: elegant, consistent, less bulky */
+.site-header {
+  background: rgba(5, 20, 38, .94);
+  border-bottom: 1px solid rgba(255,255,255,.09);
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+.nav-wrap { width: min(1240px, calc(100% - 48px)); height: 76px; }
+.brand { gap: .8rem; }
+.brand-mark { width: 44px; height: 44px; font-size: 1.05rem; }
+.brand-name { font-size: .94rem; }
+.nav { gap: clamp(.8rem, 1.4vw, 1.35rem); }
+.nav a { font-size: .9rem; transition: color .2s ease; }
+
+/* HERO: better balance, controlled background and clear hierarchy */
+.hero {
+  min-height: 760px;
+  padding: 142px 0 78px;
+  align-items: center;
+}
+.hero-bg { opacity: .43; background-position: center 48%; }
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(4,18,36,.99) 0%, rgba(4,18,36,.93) 42%, rgba(4,18,36,.70) 72%, rgba(4,18,36,.58) 100%),
+    linear-gradient(0deg, rgba(4,18,36,.76), rgba(4,18,36,.08) 65%);
+}
+.hero-pattern { opacity: .065; }
+.hero-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, .72fr);
+  gap: clamp(2.5rem, 5.5vw, 5.2rem);
+}
+.hero-copy { max-width: 720px; }
+.eyebrow { font-size: .72rem; letter-spacing: .21em; margin-bottom: .95rem; }
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(3.1rem, 5vw, 4.85rem);
+  line-height: 1.02;
+  letter-spacing: -.042em;
+  text-wrap: balance;
+}
+.hero-title {
+  max-width: 660px;
+  font-size: clamp(1.22rem, 2vw, 1.7rem);
+  line-height: 1.32;
+  margin: 1.15rem 0 .8rem;
+  letter-spacing: -.02em;
+}
+.hero-summary {
+  max-width: 640px;
+  font-size: 1rem;
+  line-height: 1.78;
+  margin-bottom: 1.2rem;
+}
+.hero-tags { gap: .5rem; margin-bottom: 1.45rem; }
+.hero-tags span { padding: .42rem .74rem; font-size: .8rem; }
+.hero-actions { gap: .7rem; }
+.btn {
+  min-height: 47px;
+  padding: .78rem 1.15rem;
+  font-size: .9rem;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.btn-primary { box-shadow: 0 8px 22px rgba(214,162,61,.14); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(214,162,61,.23); }
+.btn-ghost:hover { transform: translateY(-2px); }
+
+/* Portrait panel */
+.portrait-card {
+  width: min(100%, 360px);
+  padding: 1rem;
+  border-radius: 27px;
+  background: rgba(5,20,39,.82);
+  border-color: rgba(255,255,255,.16);
+  box-shadow: 0 26px 72px rgba(0,0,0,.28);
+}
+.portrait-ring { border-radius: 22px; border-width: 1.5px; }
+.portrait-ring img { width: 100%; aspect-ratio: 1 / 1.02; object-fit: cover; object-position: center 28%; }
+.portrait-meta { padding: .9rem .2rem .15rem; gap: .28rem; }
+.portrait-meta strong { font-size: .95rem; }
+.portrait-meta span { font-size: .88rem; line-height: 1.55; }
+
+/* Impact strip */
+.impact-strip { background: var(--cream); }
+.impact-grid div { padding: 1.4rem 1.3rem; }
+.impact-grid strong { font-size: 1.12rem; letter-spacing: -.02em; }
+.impact-grid span { display: block; line-height: 1.55; margin-top: .18rem; }
+
+/* Global section rhythm and headings */
+.section { padding: clamp(76px, 7.5vw, 100px) 0; }
+.two-col { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(3rem, 6vw, 6rem); }
+.section-heading h2 {
+  font-size: clamp(2.25rem, 3.7vw, 3.35rem);
+  line-height: 1.07;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+.section-heading.centered { max-width: 850px; margin-bottom: 3rem; }
+.section-intro { max-width: 690px; margin-inline: auto; line-height: 1.75; }
+.about-copy { font-size: 1rem; line-height: 1.82; }
+.about-copy p:first-child { font-size: clamp(1.08rem, 1.4vw, 1.2rem); line-height: 1.72; }
+.about-copy p { margin-top: 0; margin-bottom: 1rem; }
+
+/* Experience timeline: avoid an overly wide, sparse appearance */
+.timeline { max-width: 1000px; margin-top: 3.3rem; }
+.timeline-item { grid-template-columns: 185px minmax(0, 1fr); gap: 2rem; padding-bottom: 2.8rem; }
+.timeline-item:before { left: 196px; }
+.timeline-item:after { left: 190px; }
+.timeline-date { font-size: .88rem; line-height: 1.55; }
+.timeline-content { padding-left: .35rem; max-width: 760px; }
+.timeline-content h3 { font-size: 1.22rem; line-height: 1.4; }
+.timeline-content p { line-height: 1.78; }
+
+/* Projects: strong card grid, readable copy and subtle hover */
+.project-grid { gap: 1.25rem; align-items: stretch; }
+.project-card {
+  height: 100%;
+  padding: 1.8rem 1.8rem 1.65rem;
+  border-radius: 21px;
+  border-color: #e0e7ed;
+  box-shadow: 0 8px 26px rgba(8,35,64,.045);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.project-card:before { width: 4px; }
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #c7d9e4;
+  box-shadow: var(--shadow-card);
+}
+.project-number { display: inline-block; margin-bottom: .2rem; }
+.project-card h3 { font-size: 1.24rem; line-height: 1.35; margin: .55rem 0 .65rem; }
+.project-card p { font-size: .96rem; line-height: 1.75; margin-bottom: 1.15rem; }
+.chips { gap: .42rem; }
+.chips span { padding: .32rem .58rem; font-size: .72rem; }
+
+/* Events: one event should not float awkwardly in a three-column grid */
+.events-section { padding-top: clamp(76px, 7.5vw, 100px); }
+.events-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.events-grid > .event-card:only-child { grid-column: 1 / -1; width: min(100%, 850px); justify-self: center; }
+.events-grid > .event-card:only-child .event-card-image { height: 330px; }
+.event-card { border-radius: 22px; box-shadow: 0 10px 32px rgba(8,35,64,.07); }
+.event-card:hover { box-shadow: var(--shadow-card); }
+.event-card-image { height: 250px; }
+.event-card-body { padding: 1.35rem 1.45rem 1.55rem; }
+.event-card h3 { font-size: 1.45rem; line-height: 1.2; }
+.event-card-body > p:not(.event-location) { line-height: 1.72; }
+.event-link { margin-top: .2rem; }
+
+/* Speaking section */
+.section-accent { background: linear-gradient(135deg, #071c33 0%, #0a3048 100%); }
+.speaking-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2.5rem, 5.5vw, 5rem); }
+.speaking-list { gap: .85rem; }
+.speaking-list article {
+  padding: 1.25rem 1.35rem;
+  border-radius: 17px;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.speaking-list article:hover { background: rgba(255,255,255,.085); transform: translateX(3px); }
+.speaking-list h3 { font-size: 1.08rem; line-height: 1.4; }
+.speaking-list p { font-size: .95rem; line-height: 1.7; }
+
+/* Skills: balanced chips */
+.skills-grid { gap: .6rem; }
+.skills-grid span {
+  padding: .58rem .82rem;
+  font-size: .82rem;
+  border-color: #d9e3e9;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.skills-grid span:hover { background: #eef8fa; border-color: #a9d9de; transform: translateY(-2px); }
+
+/* Contact panel and footer */
+.contact-section { padding-bottom: clamp(70px, 8vw, 100px); }
+.contact-card {
+  grid-template-columns: minmax(0, 1.35fr) minmax(220px, .65fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  padding: clamp(2rem, 4vw, 3.1rem);
+  border-radius: 27px;
+}
+.contact-card h2 { font-size: clamp(1.9rem, 2.8vw, 2.3rem); line-height: 1.12; }
+.contact-card p { line-height: 1.75; }
+.contact-details { gap: .48rem; }
+.contact-details p { overflow-wrap: anywhere; }
+.contact-actions { gap: .65rem; }
+.contact-actions .btn { width: 100%; }
+.text-link { justify-self: start; }
+footer { font-size: .86rem; }
+.footer-wrap { align-items: center; }
+
+/* Reveal animation should never hide content when scripts are delayed */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .container { width: min(100% - 40px, 900px); }
+  .hero { min-height: auto; padding: 126px 0 68px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(235px, .65fr); gap: 2.2rem; }
+  .hero h1 { font-size: clamp(3rem, 5.6vw, 4.25rem); }
+  .portrait-card { max-width: 320px; }
+  .two-col { gap: 3rem; }
+  .events-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .events-grid > .event-card:only-child { grid-column: auto; }
+  .events-grid > .event-card:only-child .event-card-image { height: 285px; }
+}
+
+/* Mobile navigation and stacked sections */
+@media (max-width: 900px) {
+  .nav-wrap { height: 70px; }
+  .nav { top: 70px; gap: 0; padding: .65rem 1.25rem 1rem; }
+  .nav a { width: 100%; padding: .78rem .25rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav a:last-child { border-bottom: 0; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-copy { max-width: 720px; }
+  .portrait-card { justify-self: start; width: min(100%, 315px); }
+  .two-col, .speaking-grid, .contact-card { grid-template-columns: 1fr; }
+  .two-col { gap: 1.3rem; }
+  .impact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .impact-grid div:nth-child(2) { border-right: 0; }
+  .timeline-item { grid-template-columns: 1fr; gap: .45rem; padding-left: 1.8rem; }
+  .timeline-item:before { left: 4px; }
+  .timeline-item:after { left: -2px; }
+  .timeline-date { text-align: left; padding: 0; }
+  .timeline-content { padding: 0; }
+  .project-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .contact-actions { max-width: 420px; }
+}
+@media (max-width: 680px) {
+  .container { width: calc(100% - 32px); }
+  .nav-wrap { width: calc(100% - 32px); }
+  .brand-name { display: inline; font-size: .82rem; }
+  .brand-mark { width: 39px; height: 39px; }
+  .hero { padding: 112px 0 52px; }
+  .hero-bg { background-position: 58% center; opacity: .36; }
+  .hero-overlay {
+    background: linear-gradient(90deg, rgba(4,18,36,.97), rgba(4,18,36,.84)),
+                linear-gradient(0deg, rgba(4,18,36,.78), transparent);
+  }
+  .hero h1 { font-size: clamp(2.55rem, 10.4vw, 3.5rem); line-height: 1.03; }
+  .hero-title { font-size: 1.18rem; margin-top: .95rem; }
+  .hero-summary { font-size: .96rem; line-height: 1.72; }
+  .hero-tags { gap: .42rem; margin-bottom: 1.25rem; }
+  .hero-tags span { font-size: .75rem; padding: .36rem .62rem; }
+  .hero-actions { gap: .55rem; }
+  .btn { min-height: 44px; padding: .7rem .92rem; font-size: .84rem; }
+  .portrait-card { max-width: 275px; }
+  .impact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .impact-grid div { padding: 1.05rem .8rem; }
+  .impact-grid strong { font-size: .98rem; }
+  .impact-grid span { font-size: .78rem; }
+  .section { padding: 66px 0; }
+  .section-heading h2 { font-size: clamp(2rem, 8.8vw, 2.65rem); }
+  .section-heading.centered { text-align: left; margin-bottom: 2rem; }
+  .section-intro { margin-inline: 0; }
+  .timeline { margin-top: 2.4rem; }
+  .timeline-content h3 { font-size: 1.1rem; }
+  .project-grid, .events-grid { grid-template-columns: 1fr; }
+  .project-card { padding: 1.45rem 1.3rem; }
+  .events-grid > .event-card:only-child { width: 100%; }
+  .events-grid > .event-card:only-child .event-card-image,
+  .event-card-image { height: 225px; }
+  .contact-card { padding: 1.55rem 1.2rem; border-radius: 22px; }
+  .contact-card h2 { font-size: 1.8rem; }
+  .contact-actions { max-width: none; }
+  .footer-wrap { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 380px) {
+  .brand-name { max-width: 190px; line-height: 1.2; }
+  .hero h1 { font-size: 2.42rem; }
+  .hero-actions .btn { padding-inline: .72rem; }
+  .impact-grid { grid-template-columns: 1fr; }
+  .impact-grid div { border-right: 0; border-bottom: 1px solid #ded8cc; }
+  .impact-grid div:last-child { border-bottom: 0; }
+}
+
 
