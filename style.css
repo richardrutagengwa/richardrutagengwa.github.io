@@ -2286,3 +2286,33 @@ section[id] { scroll-margin-top: 0 !important; }
   .section-heading.centered { margin-bottom: 1rem !important; }
   #experience .timeline { margin-top: 1.1rem !important; }
 }
+
+
+/* Compact section starts: remove inherited top margins and excess vertical padding consistently */
+.section {
+  padding-top: 1.5rem !important;
+  padding-bottom: 2.25rem !important;
+}
+.section > .container {
+  margin-top: 0 !important;
+}
+.section-heading,
+.section-heading.centered,
+#projects .section-heading.centered,
+#events .section-heading.centered,
+#speaking .section-heading.centered,
+#skills .section-heading.centered {
+  margin-top: 0 !important;
+}
+#experience .section-heading.centered { margin-bottom: 1.25rem !important; }
+#experience .timeline { margin-top: 1.25rem !important; }
+#speaking .speaking-grid { margin-top: 0 !important; align-items: start; }
+#speaking .section-heading { padding-top: 0 !important; }
+#speaking .speaking-list { margin-top: 0 !important; }
+.contact-section { padding-top: 1.5rem !important; }
+@media (max-width: 900px) {
+  .section { padding-top: 1.25rem !important; padding-bottom: 2rem !important; }
+}
+@media (max-width: 640px) {
+  .section { padding-top: 1rem !important; padding-bottom: 1.75rem !important; }
+}
