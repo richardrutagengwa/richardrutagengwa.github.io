@@ -25,6 +25,3 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
-
-
-// Contact form uses FormSubmit so visitors are not dependent on a configured email app.\n
