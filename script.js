@@ -27,14 +27,4 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 
 
-// Contact form: open a pre-addressed email draft; WhatsApp has its own links.
-document.getElementById('contact-form')?.addEventListener('submit', event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const email = form.elements.email.value.trim();
-  const message = form.elements.message.value.trim();
-  if (!email || !message) return;
-  const subject = encodeURIComponent('Portfolio enquiry from ' + email);
-  const body = encodeURIComponent('Reply to: ' + email + '\n\n' + message);
-  window.location.href = 'mailto:rrutagengwa@gmail.com?subject=' + subject + '&body=' + body;
-});
+// Contact form uses FormSubmit so visitors are not dependent on a configured email app.\n
