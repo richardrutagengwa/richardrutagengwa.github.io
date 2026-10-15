@@ -2524,3 +2524,35 @@ section[id] { scroll-margin-top: 0 !important; }
 .cv-access-intro { margin: .55rem 0 .9rem; color: inherit; font-size: .88rem; line-height: 1.6; opacity: .9; }
 .cv-access-panel:not([open]) .contact-form { display: none; }
 .cv-access-panel .contact-form { margin-top: .75rem; }
+
+
+/* Project evidence images: consistent crop, readable caption, and responsive sizing. */
+#projects .project-card { min-width: 0; }
+#projects .project-image {
+  display: block;
+  overflow: hidden;
+  margin: .85rem 0 1rem;
+  border: 1px solid #dce5eb;
+  border-radius: 14px;
+  background: #f3f6f8;
+  color: #40566b;
+  text-decoration: none;
+}
+#projects .project-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .35s ease;
+}
+#projects .project-image:hover img { transform: scale(1.025); }
+#projects .project-image span {
+  display: block;
+  padding: .55rem .75rem;
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+#projects .project-image:focus-visible { outline: 3px solid var(--teal, #168b92); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { #projects .project-image img { transition: none; } }
