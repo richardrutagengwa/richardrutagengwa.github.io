@@ -2442,3 +2442,40 @@ section[id] { scroll-margin-top: 0 !important; }
   .contact-form-panel { padding: 1.15rem; border-radius: 16px; }
   .contact-intro h2 { font-size: 2rem; }
 }
+
+
+/* Contact form layout fix: reserve a separate row for each control and prevent overlap */
+.contact-form {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .6rem;
+}
+.contact-form label { display: block; margin: .35rem 0 0; }
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  position: static !important;
+  height: auto;
+  margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.contact-form input { min-height: 52px; }
+.contact-form textarea {
+  min-height: 140px;
+  height: 140px;
+  resize: vertical;
+  margin-bottom: .25rem;
+}
+.contact-submit {
+  position: static !important;
+  flex: 0 0 auto;
+  align-self: stretch;
+  margin: .25rem 0 0 !important;
+  transform: none;
+  white-space: normal;
+}
+.contact-form-note { position: static !important; margin: .25rem 0 0; }
+.contact-detail > span:last-child { align-content: start; }
+.contact-detail a { display: block; }
