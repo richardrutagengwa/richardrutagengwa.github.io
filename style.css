@@ -2722,3 +2722,36 @@ footer { padding: 1.25rem 0; }
   #certifications .certificate-slide { grid-template-columns: 1fr; }
   #certifications .certificate-art { aspect-ratio: 1.35 / 1; min-height: 0; }
 }
+
+
+/* Final fixes from website-fixes package (Oct 2026) */
+/* Keep anchored sections clear of the fixed header */
+html { scroll-padding-top: calc(var(--header-height, 80px) + 28px); }
+section[id] { scroll-margin-top: calc(var(--header-height, 80px) + 28px); }
+
+/* Balanced heading scale */
+.hero h1 { font-size: clamp(2.6rem, 4.4vw, 4.1rem); line-height: 1.04; }
+.section-heading h2,
+#certifications .section-heading h2 { font-size: clamp(2rem, 3.1vw, 2.8rem); line-height: 1.12; }
+
+/* Feature the first project with image and description side by side on wide screens */
+@media (min-width: 1000px) {
+  #projects .project-card:first-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    column-gap: clamp(1.75rem, 3vw, 2.75rem);
+    align-content: start;
+  }
+  #projects .project-card:first-child > .project-number,
+  #projects .project-card:first-child > h3 { grid-column: 1 / -1; }
+  #projects .project-card:first-child > h3 { max-width: none; }
+  #projects .project-card:first-child > .project-image {
+    grid-column: 1; grid-row: 3 / span 6; align-self: start; margin: 0;
+  }
+  #projects .project-card:first-child > p,
+  #projects .project-card:first-child > .chips { grid-column: 2; max-width: none; }
+  #projects .project-card:first-child > p:first-of-type { margin-top: 0; }
+  #projects .project-card:first-child > .chips { align-self: start; margin-top: .4rem; }
+}
+/* Keep project image captions readable */
+#projects .project-image span { font-size: .8rem; }
